@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://AnimatedTexture 16.53.7.tres" type="Texture" id=2]
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+margin_left = 80.0
+margin_top = 68.0
+margin_right = 206.0
+margin_bottom = 92.0
+
+[node name="FpsSpinBox" type="SpinBox" parent="."]
+margin_left = 87.9354
+margin_top = 120.779
+margin_right = 161.935
+margin_bottom = 144.779
+min_value = 1.0
+value = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OneshotCheckButton" type="CheckButton" parent="."]
+margin_left = 76.2813
+margin_top = 155.741
+margin_right = 152.281
+margin_bottom = 195.741
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="."]
+visible = true
+margin_left = 355.806
+margin_top = 111.886
+margin_right = 670.806
+margin_bottom = 387.886
+window_title = "Open File(s)"
+mode = 1
+access = 2
+filters = PoolStringArray( "*.png ; PNG Images", "*.jpg ; JPG images", "*.jpeg ; JPEG images" )
+current_dir = "/Users/survi/OneDrive/Desktop/Projects/Godot-Animated-Texture-Maker/Godot AnimatedTexture Maker"
+current_path = "/Users/survi/OneDrive/Desktop/Projects/Godot-Animated-Texture-Maker/Godot AnimatedTexture Maker/"
+
+[node name="ImportButton" type="Button" parent="."]
+margin_left = 372.456
+margin_top = 458.043
+margin_right = 453.456
+margin_bottom = 490.043
+text = "Import"
+
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 516.706
+margin_top = 455.214
+margin_right = 597.706
+margin_bottom = 487.214
+text = "Save"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 30.7244
+margin_top = 227.785
+margin_right = 309.724
+margin_bottom = 502.785
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="value_changed" from="FpsSpinBox" to="." method="_on_FpsSpinBox_value_changed"]
+[connection signal="toggled" from="OneshotCheckButton" to="." method="_on_OneshotCheckButton_toggled"]
+[connection signal="files_selected" from="FileDialog" to="." method="_on_FileDialog_files_selected"]
+[connection signal="pressed" from="ImportButton" to="." method="_on_ImportButton_pressed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
