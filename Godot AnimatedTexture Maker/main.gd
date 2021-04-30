@@ -21,6 +21,7 @@ func generate(input_files: PoolStringArray):
 		var img = Image.new()
 		img.load(input_files[i])
 		tex.create_from_image(img)
+		tex.storage = ImageTexture.STORAGE_COMPRESS_LOSSLESS
 		texture.set_frame_texture(i, tex)
 	
 	$TextureRect.texture = texture
