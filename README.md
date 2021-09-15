@@ -1,6 +1,6 @@
 # AnimatedTexture Maker for Godot
 
-A simple tool that aims to simplify the process of making AnimatedTextures
+A tool that aims to simplify the process of making AnimatedTextures
 
 ## How to use
 Simply drag-and-drop or select the desired images, choose your settings and then hit Save. A ".tres" file will appear in the same directory as the executable.
