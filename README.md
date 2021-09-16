@@ -12,3 +12,6 @@ Simply drag-and-drop or select the desired images, choose your settings and then
 ## Donate
 If you find this tool useful, consider donating.
 [Donate](https://www.paypal.me/pattlebass)
+
+## Icons
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
