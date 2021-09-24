@@ -78,9 +78,8 @@ func _on_OneshotCheckButton_toggled(button_pressed):
 func _on_files_dropped(files, screen):
 	var valid_files := []
 	for file in files:
-		for format in formats:
-			if file.ends_with(".%s" % format):
-				valid_files.append(file)
+		if file.get_extension() in formats:
+			valid_files.append(file)
 	
 	save_button.disabled = false
 	generate(valid_files)

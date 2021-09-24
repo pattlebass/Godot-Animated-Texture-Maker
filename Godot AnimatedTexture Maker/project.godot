@@ -10,12 +10,13 @@ config_version=4
 
 [application]
 
-config/name="Godot AnimatedTexture Maker"
+config/name="AnimatedTexture Maker"
 run/main_scene="res://main.tscn"
 run/low_processor_mode=true
-boot_splash/image="res://icon (1).png"
+boot_splash/image="res://icon_fin.png"
 boot_splash/fullsize=false
-config/icon="res://icon (1).png"
+config/icon="res://icon_fin.png"
+config/windows_native_icon="res://icon_win.ico"
 
 [display]
 
